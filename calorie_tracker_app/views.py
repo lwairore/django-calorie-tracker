@@ -10,10 +10,11 @@ def index(request):
         user = request.user
         consume = ConsumeModel(user=user, food_consumed=consume)
         consume.save()
-        foods = FoodModel.objects.all()
+        foods = FoodModel.objects.order_by().all()
 
     else:
-        foods = FoodModel.objects.all()
-    consumed_food = ConsumeModel.objects.filter(user=request.user)
+        foods = FoodModel.objects.order_by().all()
+
+    consumed_food = ConsumeModel.objects.order_by().filter(user=request.user)
 
     return render(request, 'calorie_tracker/index.html', {'foods': foods, 'consumed_food': consumed_food})
