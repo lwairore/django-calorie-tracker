@@ -6,5 +6,5 @@ app_name = CalorieTrackerAppConfig.name
 
 urlpatterns = [
     path('', index, name="index"),
-    path('', delete_consume, name="delete_consume"),
+    path('delete/<int:id>', delete_consume, name="delete_consume"),
 ]
