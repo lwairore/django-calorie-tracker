@@ -23,7 +23,7 @@ class ConsumeModel(Model):
     food_consumed = ForeignKey(FoodModel, on_delete=CASCADE)
 
     def __str__(self):
-        return self.name
+        return f'{self.user.username} {self.food_consumed.name}'
 
     class Meta:
         verbose_name = 'Consume'
