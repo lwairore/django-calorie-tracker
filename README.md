@@ -14,3 +14,8 @@ This web app tracks calorie intakes based on the user’s inputs. The app can di
 - Javascript
 - CSS
 - Docker
+
+
+
+# Demo:
+![image](./assets/demo/calorie-tracker-preview.png)
