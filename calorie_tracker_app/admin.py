@@ -1,6 +1,6 @@
 from calorie_tracker_app.models import ConsumeModel, FoodModel
-from django.contrib.admin import register
+from django.contrib import admin
 
 # Register your models here.
-register(FoodModel)
-register(ConsumeModel)
+admin.site.register(FoodModel)
+admin.site.register(ConsumeModel)
