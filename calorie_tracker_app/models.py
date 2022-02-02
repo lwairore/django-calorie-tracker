@@ -18,7 +18,7 @@ class FoodModel(Model):
         verbose_name = 'Food'
         verbose_name_plural = 'Foods'
         
-class Consume(Model):
+class ConsumeModel(Model):
     user = ForeignKey(User, on_delete=CASCADE)
     food_consumed = ForeignKey(FoodModel, on_delete=CASCADE)
 
