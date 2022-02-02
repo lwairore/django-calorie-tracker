@@ -15,10 +15,9 @@ Including another URLconf
 """
 from calorie_tracker_app.apps import CalorieTrackerAppConfig
 from django.contrib import admin
-from django.urls import path
-from django.urls.conf import include
+from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('calorie_tracker.urls', namespace=CalorieTrackerAppConfig.name)),
+    path('', include(CalorieTrackerAppConfig.name+'.urls', namespace=CalorieTrackerAppConfig.name)),
 ]
