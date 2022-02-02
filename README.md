@@ -5,7 +5,6 @@ The intention here is to create a web app using Djnago that tracks calories inta
 
 This web app tracks calorie intakes based on the user’s inputs. The app can display the breakdown of the nutrients for the day along with the calorie goals.
 
-
 # Technology stack:
 - Django
 - Python 
@@ -14,8 +13,6 @@ This web app tracks calorie intakes based on the user’s inputs. The app can di
 - Javascript
 - CSS
 - Docker
-
-
 
 # Demo:
 ![image](./assets/demo/calorie-tracker-preview.png)
