@@ -1,5 +1,5 @@
 from calorie_tracker_app.models import ConsumeModel, FoodModel
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 
 # Create your views here.
 def index(request):
@@ -18,3 +18,10 @@ def index(request):
     consumed_food = ConsumeModel.objects.order_by().filter(user=request.user)
 
     return render(request, 'calorie_tracker/index.html', {'foods': foods, 'consumed_food': consumed_food})
+
+def delete_consume(request, id):
+    consumed_food = ConsumeModel.objects.get(id=id)
+    if request.method == 'POST':
+        consumed_food.delete()
+        return redirect('/')
+    return render(request, 'calorie_tracker/delete.html')
