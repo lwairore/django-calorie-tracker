@@ -10,6 +10,7 @@ ENV SQL_PASSWORD 'calorie_tracker123'
 ENV SQL_HOST 'calorie_tracker_db'
 ENV SQL_PORT 5432
 ENV DJANGO_SETTINGS_MODULE 'calorie_tracker.settings.development'
+ENV DEVELOPMENT_ALLOWED_HOSTS '127.0.0.1, localhost, 0.0.0.0'
 
 RUN mkdir /calorie_tracker_project
 WORKDIR /calorie_tracker_project
