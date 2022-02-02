@@ -3,4 +3,8 @@ from django.contrib import admin
 
 # Register your models here.
 admin.site.register(FoodModel)
-admin.site.register(ConsumeModel)
+
+@admin.site.register(ConsumeModel)
+class ConsumeModelAdmin(admin.ModelAdmin):
+    list_display = ('user', 'food_consumed',)
+
